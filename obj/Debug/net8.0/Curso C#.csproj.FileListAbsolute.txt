@@ -1,0 +1,15 @@
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\bin\Debug\net8.0\Curso C#.exe
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\bin\Debug\net8.0\Curso C#.deps.json
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\bin\Debug\net8.0\Curso C#.runtimeconfig.json
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\bin\Debug\net8.0\Curso C#.dll
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\bin\Debug\net8.0\Curso C#.pdb
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.AssemblyInfoInputs.cache
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.AssemblyInfo.cs
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.csproj.CoreCompileInputs.cache
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.sourcelink.json
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.dll
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\refint\Curso C#.dll
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.pdb
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\Curso C#.genruntimeconfig.cache
+C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\obj\Debug\net8.0\ref\Curso C#.dll
