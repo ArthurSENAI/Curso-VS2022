@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Curso C#.csproj",
-      "projectName": "Curso C#",
-      "projectPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Curso C#.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Curso CSharp.csproj",
+      "projectName": "Curso CSharp",
+      "projectPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Curso CSharp.csproj",
       "packagesPath": "C:\\Users\\Aluno Noite\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\obj\\",
       "projectStyle": "PackageReference",

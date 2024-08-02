@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Curso_C_
+namespace Curso_CSharp
 {
     public static class TiposPrimitivos
     {
