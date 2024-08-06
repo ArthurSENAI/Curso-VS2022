@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso C#.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso C#.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\exercicios\\exerciciotiposprimitivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:exercicios\\exerciciotiposprimitivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\tiposprimitivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:tiposprimitivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\operadoresaritmeticos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\operadoresaritmeticos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\tiposprimitivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\tiposprimitivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TiposPrimitivos.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\TiposPrimitivos.cs",
-              "RelativeDocumentMoniker": "TiposPrimitivos.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\TiposPrimitivos.cs",
-              "RelativeToolTip": "TiposPrimitivos.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T18:56:37.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ExercicioTiposPrimitivos.cs",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\ExercicioTiposPrimitivos.cs",
               "RelativeDocumentMoniker": "Exercicios\\ExercicioTiposPrimitivos.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\ExercicioTiposPrimitivos.cs",
               "RelativeToolTip": "Exercicios\\ExercicioTiposPrimitivos.cs",
-              "ViewState": "AQIAANQAAAAAAAAAAAAwwPMAAABFAAAA",
+              "ViewState": "AQIAANYAAAAAAAAAAADwv/gAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T18:44:42.284Z",
+              "WhenOpened": "2024-08-06T18:36:44.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC8AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T18:02:24.034Z",
+              "WhenOpened": "2024-08-06T17:28:29.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TiposPrimitivos.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\TiposPrimitivos.cs",
+              "RelativeDocumentMoniker": "Guia\\TiposPrimitivos.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\TiposPrimitivos.cs",
+              "RelativeToolTip": "Guia\\TiposPrimitivos.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:21:55.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OperadoresAritmeticos.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\OperadoresAritmeticos.cs",
+              "RelativeDocumentMoniker": "Guia\\OperadoresAritmeticos.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\OperadoresAritmeticos.cs",
+              "RelativeToolTip": "Guia\\OperadoresAritmeticos.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:17:45.781Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,4 @@
-﻿using Curso_CSharp;
+﻿using CursoCSharp.Guia;
 using CursoCSharp.Exercicios;
 
 //TiposPrimitivos.ImprimirTipos();
@@ -24,4 +24,28 @@ using CursoCSharp.Exercicios;
 //ExercicioTiposPrimitivos.Exercicio17();
 //ExercicioTiposPrimitivos.Exercicio18();
 //ExercicioTiposPrimitivos.Exercicio19();
-ExercicioTiposPrimitivos.Exercicio20();
+//ExercicioTiposPrimitivos.Exercicio20();
+
+//ExercicioOperadoresAritmeticos.Exercicio1();
+//ExercicioOperadoresAritmeticos.Exercicio2();
+//ExercicioOperadoresAritmeticos.Exercicio3();
+//ExercicioOperadoresAritmeticos.Exercicio4();
+//ExercicioOperadoresAritmeticos.Exercicio5();
+//ExercicioOperadoresAritmeticos.Exercicio6();
+//ExercicioOperadoresAritmeticos.Exercicio7();
+//ExercicioOperadoresAritmeticos.Exercicio8();
+//ExercicioOperadoresAritmeticos.Exercicio9();
+//ExercicioOperadoresAritmeticos.Exercicio10();
+//ExercicioOperadoresAritmeticos.Exercicio11();
+//ExercicioOperadoresAritmeticos.Exercicio12();
+//ExercicioOperadoresAritmeticos.Exercicio13();
+//ExercicioOperadoresAritmeticos.Exercicio14();
+//ExercicioOperadoresAritmeticos.Exercicio15();
+//ExercicioOperadoresAritmeticos.Exercicio16();
+//ExercicioOperadoresAritmeticos.Exercicio17();
+//ExercicioOperadoresAritmeticos.Exercicio18();
+//ExercicioOperadoresAritmeticos.Exercicio19();
+//ExercicioOperadoresAritmeticos.Exercicio20();
+
+
+
