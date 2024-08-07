@@ -48,7 +48,7 @@ namespace CursoCSharp.Guia
         }
 
         // Metodo para demonstrar o operador de atribuição composto com modulo (%=)
-        public static void AtribuicaModulo()
+        public static void AtribuicaoModulo()
         {
             int a = 10;
             a %= 5; // Equivalente a a = a % 5
@@ -56,7 +56,7 @@ namespace CursoCSharp.Guia
         }
 
         // Metodo para demonstrar o operador de atribuição composto com AND (&=)
-        public static void AtribuicaAnd()
+        public static void AtribuicaoAnd()
         {
             int a = 12; // Binario: 1100
             a &= 7; // Binario: 0111
@@ -68,7 +68,7 @@ namespace CursoCSharp.Guia
         public static void AtribuicaoOr()
         {
             int a = 12; // Binario: 1100
-            a &= 5; // Binario: 0101
+            a |= 5; // Binario: 0101
                     // Resultado: 1101(13 em decimal)
             Console.WriteLine($"Valor de a apos a operação |=: {a}");
         }
@@ -83,18 +83,18 @@ namespace CursoCSharp.Guia
         }
 
         // Metodo para demonstrar o operador de atribuicao para a esquerda (<<=)  em C#
-        public static void AtribuicaDeslocamentoEsquerda()
+        public static void AtribuicaoDeslocamentoEsquerda()
         {
-            int a = 4; // BInario: 0100
+            int a = 4; // Binario: 0100
             a <<= 2; // Desloca 2 bits á esquerda: 0001 0000 (16 em decimal)
             Console.WriteLine($"Valor de a apos a operação <<= 2: {a}");
         }
 
         // Metodo para demonstrar o operador de atribuicao para a direita (>>)  em C#
-        public static void AtribuicaDeslocamentoDireta()
+        public static void AtribuicaoDeslocamentoDireita()
         {
-            int a = 4; // BInario: 0001 0000
-            a >>= 2; // Desloca 2 bits á direita: 0000 0100 (16 em decimal)
+            int a = 16; // Binario: 0001 0000
+            a >>= 2; // Desloca 2 bits á direita: 0000 0100 (4 em decimal)
             Console.WriteLine($"Valor de a apos a operação >>= 2: {a}");
         }
     }
