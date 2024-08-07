@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Curso_CSharp
+namespace CursoCSharp.Guia
 {
     public class EntradaSaidaDados
     {
@@ -15,10 +15,12 @@ namespace Curso_CSharp
             Console.WriteLine("Digite o seu nome:");
             nome = Console.ReadLine();
 
-            if (nome == "") {
+            if (nome == "")
+            {
                 Console.WriteLine("Nenhum nome foi digitado");
-            } 
-            else {
+            }
+            else
+            {
                 Console.WriteLine($"Seu nome é: {nome}!");
             }
 

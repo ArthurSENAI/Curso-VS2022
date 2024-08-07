@@ -48,4 +48,12 @@ using CursoCSharp.Exercicios;
 //ExercicioOperadoresAritmeticos.Exercicio20();
 
 
-
+bool resultado;
+resultado = OperadoresLogicos.ELogico(true, true);
+Console.WriteLine($"O resultado de AND logico é {resultado}");
+resultado = OperadoresLogicos.OULogico(true, true);
+Console.WriteLine($"O resultado de OR logico é {resultado}");
+resultado = OperadoresLogicos.Negacao(true);
+Console.WriteLine($"O resultado de NOT logico é {resultado}");
+resultado = OperadoresLogicos.OUExclusivo(true, true);
+Console.WriteLine($"O resultado de XOR logico é {resultado}");
