@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\09-estruturacondicionais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\09-estruturacondicionais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\05-operadoresatribuicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\05-operadoresatribuicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAswEEAAAACAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T20:34:03.273Z",
+              "WhenOpened": "2024-08-08T17:35:19.989Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "05-OperadoresAtribuicao.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\05-OperadoresAtribuicao.cs",
-              "RelativeDocumentMoniker": "Guia\\05-OperadoresAtribuicao.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\05-OperadoresAtribuicao.cs",
-              "RelativeToolTip": "Guia\\05-OperadoresAtribuicao.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAIwDIAAAAlAAAA",
+              "DocumentIndex": 0,
+              "Title": "09-EstruturaCondicionais.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\09-EstruturaCondicionais.cs",
+              "RelativeDocumentMoniker": "Guia\\09-EstruturaCondicionais.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\09-EstruturaCondicionais.cs",
+              "RelativeToolTip": "Guia\\09-EstruturaCondicionais.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAmwDUAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T19:46:21.047Z",
+              "WhenOpened": "2024-08-08T18:59:19.838Z",
               "EditorCaption": ""
             }
           ]

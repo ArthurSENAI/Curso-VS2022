@@ -1,0 +1,69 @@
+Em C#, os operadores podem ser classificados em várias categorias além dos operadores de atribuição e lógicos. Aqui está uma visão geral dos principais tipos de operadores disponíveis em C#:
+
+1. Operadores Aritméticos
+	Esses operadores são usados para realizar operações matemáticas básicas.
+		•	Adição (+): a + b
+		•	Subtração (-): a - b
+		•	Multiplicação (*): a * b
+		•	Divisão (/): a / b
+		•	Módulo (%): a % b
+2. Operadores de Comparação
+	Esses operadores comparam dois valores e retornam um valor booleano (true ou false).
+		•	Igual a (==): a == b
+		•	Diferente de (!=): a != b
+		•	Maior que (>): a > b
+		•	Menor que (<): a < b
+		•	Maior ou igual a (>=): a >= b
+		•	Menor ou igual a (<=): a <= b
+3. Operadores Lógicos
+	Esses operadores são usados para combinar ou inverter expressões booleanas.
+		•	E lógico (&&): a && b
+		•	OU lógico (||): a || b
+		•	Negação (!): !a
+		•	OU exclusivo (^): a ^ b
+4. Operadores de Atribuição
+	Esses operadores atribuem um valor a uma variável e podem realizar uma operação ao mesmo tempo.
+		•	Atribuição simples (=): a = b
+		•	Atribuição com adição (+=): a += b
+		•	Atribuição com subtração (-=): a -= b
+		•	Atribuição com multiplicação (*=): a *= b
+		•	Atribuição com divisão (/=): a /= b
+		•	Atribuição com módulo (%=): a %= b
+		•	Atribuição com bitwise AND (&=): a &= b
+		•	Atribuição com bitwise OR (|=): a |= b
+		•	Atribuição com bitwise XOR (^=): a ^= b
+		•	Atribuição com deslocamento à esquerda (<<=): a <<= b
+		•	Atribuição com deslocamento à direita (>>=): a >>= b
+5. Operadores de Bitwise
+	Esses operadores operam em bits e são usados para operações em nível de bit.
+		•	AND bitwise (&): a & b
+		•	OR bitwise (|): a | b
+		•	XOR bitwise (^): a ^ b
+		•	Complemento bitwise (~): ~a
+		•	Deslocamento à esquerda (<<): a << b
+		•	Deslocamento à direita (>>): a >> b
+6. Operadores de Incremento e Decremento
+	Esses operadores são usados para aumentar ou diminuir o valor de uma variável.
+		•	Incremento (++): a++ (pós-incremento) ou ++a (pré-incremento)
+		•	Decremento (--): a-- (pós-decremento) ou --a (pré-decremento)
+7. Operadores Condicionais
+	Esses operadores são usados para tomar decisões com base em condições.
+		•	Condicional ternário (?:): condicao ? valorSeVerdadeiro : valorSeFalso
+		o	Exemplo: int resultado = (a > b) ? a : b;
+8. Operador de Null-Coalescence
+	Esse operador é usado para fornecer um valor padrão se uma expressão for null.
+		•	Null-coalescence (??): a ?? b
+		o	Exemplo: string resultado = nome ?? "Desconhecido";
+9. Operador de Interseção (de Tipos)
+	
+		•	is: Verifica se um objeto é de um tipo específico.
+		o	Exemplo: if (obj is string) { /* ... */ }
+10. Operador de Tipo
+	Esse operador é usado para obter o tipo de um objeto.
+		•	typeof: Retorna o tipo do objeto em forma de Type.
+		o	Exemplo: Type tipo = typeof(int);
+11. Operador de Cast
+	Esse operador é usado para converter um tipo em outro.
+		•	Cast explícito ((tipo)): (int)valor
+		o	Exemplo: double d = 10.5; int i = (int)d;
+
