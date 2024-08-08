@@ -70,5 +70,8 @@ Console.WriteLine($"O resultado de XOR logico é {resultado}");*/
 //OperadoresAtribuicao.AtribuicaoDeslocamentoEsquerda();
 //OperadoresAtribuicao.AtribuicaoDeslocamentoDireita();
 
-OperadoresComparacao.DemonstrarOperadores();
-OperadorTernario.Demonstrarternario();
+//OperadoresComparacao.DemonstrarOperadores();
+//OperadorTernario.Demonstrarternario();
+//EstruturaCondicionais.DemostrarCondicional();
+//EstruturaRepeticao.DemonstrarRepeticoes();
+Arrays.DemonstraArray();
