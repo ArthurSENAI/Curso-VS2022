@@ -248,4 +248,19 @@ namespace CursoCSharp.Exercicios
 
     }
 
+
+    public class Mulher 
+    {
+        public string? Nome;
+        public int Idade;
+        public double Altura;
+        public double Peso;
+        public int Beleza;
+
+        public void ExibirInfo() 
+        {
+            Console.WriteLine($"Nome: {Nome}, Idade: {Idade}, Altura: {Altura:F2}m, Peso: {Peso:F2}kg, Beleza: {Beleza}");
+        }
+    }
+
 }
