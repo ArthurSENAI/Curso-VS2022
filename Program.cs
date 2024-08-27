@@ -201,7 +201,7 @@ foreach (int idade in idadesTeste)
 
 exemplo.ExibirAltura();*/
 
-Mulher Julia = new Mulher();
+/*Mulher Julia = new Mulher();
 
 Julia.Nome = "Julia";
 Julia.Idade = 21;
@@ -209,4 +209,7 @@ Julia.Altura = 1.56;
 Julia.Peso = 53;
 Julia.Beleza = 8;
 
-Julia.ExibirInfo();
+Julia.ExibirInfo();*/
+
+VarUsageExample exemplo = new VarUsageExample();
+exemplo.DemonstrateVarUsage();
