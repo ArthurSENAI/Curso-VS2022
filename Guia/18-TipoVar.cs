@@ -47,7 +47,7 @@ namespace CursoCSharp.Guia
             var query = from n in numbers
                         where n % 2 == 0
                         select n;
-
+            
             Console.WriteLine("Numeros Pares:");
             foreach (var numeroPar in query)
             {

@@ -211,5 +211,11 @@ Julia.Beleza = 8;
 
 Julia.ExibirInfo();*/
 
-VarUsageExample exemplo = new VarUsageExample();
-exemplo.DemonstrateVarUsage();
+/*VarUsageExample exemplo = new VarUsageExample();
+exemplo.DemonstrateVarUsage();*/
+
+/*var exemplo = new ExemploUsoDynamic();
+exemplo.DemonstrarUsoDynamic();*/
+
+var exemplo = new ExemploUsoLINQ();
+exemplo.DemonstrarUsoLINQ();
