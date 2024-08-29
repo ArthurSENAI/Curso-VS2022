@@ -217,5 +217,50 @@ exemplo.DemonstrateVarUsage();*/
 /*var exemplo = new ExemploUsoDynamic();
 exemplo.DemonstrarUsoDynamic();*/
 
-var exemplo = new ExemploUsoLINQ();
-exemplo.DemonstrarUsoLINQ();
+/*var exemplo = new ExemploUsoLINQ();
+exemplo.DemonstrarUsoLINQ();*/
+
+
+//1.
+/*var exemplo = new Exercicio2808();
+exemplo.DescobrirTipo();
+*/
+/*-------
+ * 2.
+// Cria uma lista de inteiros
+var numeros = new List<int> { 5, 2, 9, 1, 5, 6 };
+
+// Cria uma instância da classe Exercicio2908
+var exemplo = new Exercicio2808();
+
+// Chama o método OrdenarListaCrescente passando a lista de números
+exemplo.OrdenarListaCrescente(numeros);
+-------*/
+
+/*-------------
+ *3.
+// Declara uma variável var para uma instância da classe Pessoa
+var pessoa = new Pessoa3{ Nome = "João", Idade = 30};
+
+// Chama o método da classe Pessoa
+pessoa.ExibirInformacoes();
+-------------*/
+
+/*//4.
+var exemplo = new PessoaLINQ { Nome = "Arthur", Idade = 29};
+exemplo.ExibirInformacoes();
+
+//5.
+// Cria um tipo anônimo para armazenar informações de uma pessoa
+var pessoa = new
+{
+    Nome = "Maria",
+    Idade = 28
+};
+
+//Exibe as informações da pessoa
+Console.WriteLine($"Nome: {pessoa.Nome}, Idade: {pessoa.Idade}");*/
+
+var consulta = new Exercicio2908();
+consulta.ExibirConsulta();
+
