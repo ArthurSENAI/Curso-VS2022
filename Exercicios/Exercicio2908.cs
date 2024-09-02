@@ -161,7 +161,167 @@ namespace CursoCSharp.Exercicios
                 Console.WriteLine($"{livro.Titulo} - {livro.Autor} - {livro.AnoPublicacao}");
             }
         }
+
     }*/
 
+    /*public class Pessoa2
+    {
+        public int Idade;
+        public string? Nome;
+        public string? Cidade;
+    }
 
-}
+    public class Exercicio6
+    {
+        public void PessoasPorCidade(string cidade)
+        {
+             var pessoasList = new List<Pessoa2>
+            {
+              new NovaPessoa{ Idade = 23, Nome = "Alice", Cidade = "São Paulo" },
+              new NovaPessoa{ Idade = 19, Nome = "Bob", Cidade = "Rio de Janeiro" },
+              new NovaPessoa{ Idade = 25, Nome = "Charlie", Cidade = "Belo Horizonte" },
+              new NovaPessoa{ Idade = 30, Nome = "Diana", Cidade = "Belo Horizonte"},
+              new NovaPessoa{ Idade = 28, Nome = "Eduardo", Cidade = "São Paulo" }
+            };
+
+            var pessoasPorCidade = pessoasList.Where(p => p.Cidade == cidade).ToList();
+
+
+            Console.WriteLine($"As pessoas dessa cidade são {cidade}: ");
+            foreach (var pessoa in pessoasPorCidade)
+            {
+                Console.WriteLine($"{pessoa.Nome} - {pessoa.Idade} - {pessoa.Cidade}");
+            }
+        }
+
+
+    }*/
+
+    /*    public class NovaPessoa
+        {
+            public int Idade;
+            public string? Nome;
+            public string? Cidade;
+        }
+
+        public class Exercicio7
+        {
+            public void MaisVelhoPorCidade()
+            {
+                var pessoasList = new List<NovaPessoa>
+                {
+                  new NovaPessoa{ Idade = 23, Nome = "Alice", Cidade = "São Paulo" },
+                  new NovaPessoa{ Idade = 19, Nome = "Bob", Cidade = "Rio de Janeiro" },
+                  new NovaPessoa{ Idade = 25, Nome = "Charlie", Cidade = "Belo Horizonte" },
+                  new NovaPessoa{ Idade = 30, Nome = "Diana", Cidade = "Belo Horizonte"},
+                  new NovaPessoa{ Idade = 28, Nome = "Eduardo", Cidade = "São Paulo" }
+                };
+
+                var pessoasMaisVelhoPorCidade = pessoasList
+                    .GroupBy(p => p.Cidade)
+                    .Select(grupo => grupo.OrderByDescending(p => p.Idade))
+                    .First();
+
+
+                Console.WriteLine($"As pessoas mais velha por cidade é: ");
+                foreach (var pessoa in pessoasMaisVelhoPorCidade)
+                {
+                    Console.WriteLine($"{pessoa.Nome} - {pessoa.Idade} - {pessoa.Cidade}");
+                }
+            }
+        }*/
+
+    /*public class NovaPessoa
+    {
+        public int Idade;
+        public string? Nome;
+        public string? Cidade;
+        public decimal Salario;
+    }
+
+    public class Exercicio8
+    {
+        public void MaiorSalarioPorCidade()
+        {
+            var pessoasList = new List<NovaPessoa>
+            {
+                new NovaPessoa{ Idade = 23, Nome = "Alice", Cidade = "S?o Paulo", Salario = 5000m },
+                new NovaPessoa{ Idade = 19, Nome = "Bob", Cidade = "Rio de Janeiro", Salario = 4500m },
+                new NovaPessoa{ Idade = 25, Nome = "Charlie", Cidade = "Belo Horizonte", Salario = 6000m },
+                new NovaPessoa{ Idade = 30, Nome = "Diana", Cidade = "Belo Horizonte", Salario = 4000},
+                new NovaPessoa{ Idade = 28, Nome = "Eduardo", Cidade = "S?o Paulo", Salario = 5500m },
+                new NovaPessoa{ Idade = 22, Nome = "Francisco", Cidade = "Rio de Janeiro", Salario = 4800m }
+            };
+
+            var pessoaMediaSalarial = pessoasList.Average(p => p.Salario);
+
+            Console.WriteLine($"A media salarial é: {pessoaMediaSalarial}");
+        }
+    }*/
+
+    /*public class NovaPessoa
+    {
+        public int Idade;
+        public string? Nome;
+        public string? Cidade;
+    }
+    public class Exercicio9
+    {
+        public void ExibirMetodo()
+        {
+            var pessoasList = new List<NovaPessoa>
+            {
+              new NovaPessoa{ Idade = 16, Nome = "Alice", Cidade = "São Paulo" },
+              new NovaPessoa{ Idade = 19, Nome = "Bob", Cidade = "Rio de Janeiro" },
+              new NovaPessoa{ Idade = 25, Nome = "Charlie", Cidade = "Belo Horizonte" },
+              new NovaPessoa{ Idade = 30, Nome = "Diana", Cidade = "Fortaleza"},
+              new NovaPessoa{ Idade = 28, Nome = "Eduardo", Cidade = "São Paulo" },
+              new NovaPessoa{ Idade = 22, Nome = "Francisco", Cidade = "Rio de Janeiro" },
+              new NovaPessoa{ Idade = 35, Nome = "Gabriel", Cidade = "Belo Horizonte" },
+              new NovaPessoa{ Idade = 31, Nome = "Hugo", Cidade = "Fortaleza"}
+            };
+
+            var pessoasEntreIdades = pessoasList
+                .Where(p => p.Idade >= 20 && p.Idade <= 30)
+                .OrderBy(p => p.Nome)
+                .Select(p => p.Nome);
+
+            Console.WriteLine($"{pessoasEntreIdades.Count()} Pessoa entre 20 e 30 anos: ");
+            foreach (var pessoa in pessoasEntreIdades)
+            {
+                Console.WriteLine($"{pessoa}");
+            }
+        }
+    }*/
+/*
+    public class NovaPessoa
+    {
+        public int Idade;
+        public string? Nome;
+        public string? Cidade;
+    }
+    public class Exercicio10
+    {
+        public void ExibirMetodo()
+        {
+            var pessoasList = new List<NovaPessoa>
+            {
+              new NovaPessoa{ Idade = 16, Nome = "Alice", Cidade = "São Paulo" },
+              new NovaPessoa{ Idade = 19, Nome = "Bob", Cidade = "Rio de Janeiro" },
+              new NovaPessoa{ Idade = 25, Nome = "Charlie", Cidade = "Belo Horizonte" },
+              new NovaPessoa{ Idade = 30, Nome = "Diana", Cidade = "Fortaleza"},
+              new NovaPessoa{ Idade = 28, Nome = "Eduardo", Cidade = "São Paulo" },
+              new NovaPessoa{ Idade = 22, Nome = "Francisco", Cidade = "Rio de Janeiro" },
+              new NovaPessoa{ Idade = 35, Nome = "Gabriel", Cidade = "Belo Horizonte" },
+              new NovaPessoa{ Idade = 31, Nome = "Hugo", Cidade = "Fortaleza"}
+            };
+
+            var pessoasMais30 = pessoasList
+                .Where(p => p.Idade >= 30)
+                .OrderBy(p => p.Nome)
+                .Select(p => p.Nome);
+
+            Console.WriteLine($"{pessoasMais30.Count()} pessoas com mais de 30. ");
+        }
+    }
+}*/

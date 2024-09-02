@@ -1,6 +1,6 @@
 ﻿using CursoCSharp.Guia;
 using CursoCSharp.Exercicios;
 
-var pessoa = new Exercicio5();
+var pessoa = new Exercicio10();
 pessoa.ExibirMetodo();
 
