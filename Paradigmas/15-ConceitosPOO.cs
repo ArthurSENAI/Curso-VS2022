@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoCSharp.Guia
+namespace CursoCSharp.Paradigmas
 {
     // Classe que explica os conceitos básicos de Orientação a Objetos
     public class ParadigmasPOO

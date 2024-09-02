@@ -1,6 +1,6 @@
 ﻿using CursoCSharp.Guia;
 using CursoCSharp.Exercicios;
 
-var pessoa = new Exercicio10();
-pessoa.ExibirMetodo();
-
+var Enumumeracao = new ExplicacaoEnum();
+Enumumeracao.ExplicacaoDetalhada();
+Enumumeracao.DemonstrarEnum();

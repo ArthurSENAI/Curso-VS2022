@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoCSharp.Guia
+namespace CursoCSharp.Paradigmas
 {
     // Definição da classe Produto
     public class Produto
