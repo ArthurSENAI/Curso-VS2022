@@ -1,6 +1,9 @@
 ﻿using CursoCSharp.Guia;
 using CursoCSharp.Exercicios;
 
-var Enumumeracao = new ExplicacaoEnum();
-Enumumeracao.ExplicacaoDetalhada();
-Enumumeracao.DemonstrarEnum();
+CarroNovo meuCarro = new CarroNovo();
+meuCarro.Modelo = "Fusca";
+meuCarro.Ano = 1976;
+meuCarro.Preco = 15000.00;
+
+meuCarro.ExibirInfo();

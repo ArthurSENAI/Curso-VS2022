@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\24-colecoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\24-colecoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\20-metodo(por ref por valor).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\20-metodo(por ref por valor).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\exercicios\\exercicio0309.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:exercicios\\exercicio0309.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\21-recursao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\21-recursao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\23-nullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\23-nullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\22-structs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\22-structs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\exercicios\\exercicio2908.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:exercicios\\exercicio2908.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\guia\\18-linq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:guia\\18-linq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,109 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "24-Colecoes.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\24-Colecoes.cs",
-              "RelativeDocumentMoniker": "Guia\\24-Colecoes.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\24-Colecoes.cs",
-              "RelativeToolTip": "Guia\\24-Colecoes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T19:33:11.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "23-Nullable.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\23-Nullable.cs",
-              "RelativeDocumentMoniker": "Guia\\23-Nullable.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\23-Nullable.cs",
-              "RelativeToolTip": "Guia\\23-Nullable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T19:32:55.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "22-Structs.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\22-Structs.cs",
-              "RelativeDocumentMoniker": "Guia\\22-Structs.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\22-Structs.cs",
-              "RelativeToolTip": "Guia\\22-Structs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T19:32:30.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "21-Recursao.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\21-Recursao.cs",
-              "RelativeDocumentMoniker": "Guia\\21-Recursao.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\21-Recursao.cs",
-              "RelativeToolTip": "Guia\\21-Recursao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T19:31:30.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Exercicio2908.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\Exercicio2908.cs",
-              "RelativeDocumentMoniker": "Exercicios\\Exercicio2908.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\Exercicio2908.cs",
-              "RelativeToolTip": "Exercicios\\Exercicio2908.cs",
-              "ViewState": "AgIAACMBAAAAAAAAAAAkwC4BAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T18:35:03.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "18-LINQ.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\18-LINQ.cs",
-              "RelativeDocumentMoniker": "Guia\\18-LINQ.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\18-LINQ.cs",
-              "RelativeToolTip": "Guia\\18-LINQ.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwBYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T19:42:49.127Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20-Metodo(Por ref Por valor).cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\20-Metodo(Por ref Por valor).cs",
-              "RelativeDocumentMoniker": "Guia\\20-Metodo(Por ref Por valor).cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Guia\\20-Metodo(Por ref Por valor).cs",
-              "RelativeToolTip": "Guia\\20-Metodo(Por ref Por valor).cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T19:30:53.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T19:42:53.468Z",
+              "WhenOpened": "2024-09-03T18:20:40.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Exercicio0309.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\Exercicio0309.cs",
+              "RelativeDocumentMoniker": "Exercicios\\Exercicio0309.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\Exercicio0309.cs",
+              "RelativeToolTip": "Exercicios\\Exercicio0309.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T17:14:00.415Z",
               "EditorCaption": ""
             }
           ]
