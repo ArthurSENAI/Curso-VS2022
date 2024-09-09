@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CursoCSharp.Guia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,8 +65,60 @@ namespace CursoCSharp.Exercicios
     }*/
 
 
+        /*public class Matematica 
+        {
+            public int Num {  get; set; }
 
+            public void Fatorial(int num)
+            {
+                this.Num = num;
+                int fatorial = 1;
+                for (int i = 1; i <= num; i++)
+                {
+                    fatorial *= i;
+                }
+                Console.WriteLine($"O fatorial de {num} é {fatorial}");
 
+            }
+        }*/
 
+    /*public class Retangulo
+    {
+        public double Largura { get; set; }
+        public double Altura { get; set; }
 
+        // Construtor que aceita largura e altura
+        public Retangulo(double largura, double altura)
+        {
+            Largura = largura;
+            Altura = altura;
+        }
+
+        // Construtor que usa valores padrão
+        public Retangulo() : this(1, 1) // Chama o outro construtor com valores padrão
+        {
+        }
+
+        public double CalcularArea()
+        {
+            return Largura * Altura;
+        }
+    }*/
+
+    /*public class Pessoa
+    {
+        public int Idade { get; set; }
+
+        // Método de instância que aumenta a idade
+        public void AumentarIdade()
+        {
+            Idade++;
+        }
+
+        // Método estático que cria uma nova pessoa com idade inicial 0
+        public static Pessoa CriarPessoa()
+        {
+            return new Pessoa { Idade = 0 };
+        }
+    }*/
 }
