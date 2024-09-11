@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\exercicios\\exercicio0309.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:exercicios\\exercicio0309.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\paradigmas\\07-multiplicidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:paradigmas\\07-multiplicidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\paradigmas\\06-composicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:paradigmas\\06-composicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\paradigmas\\05-associacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:paradigmas\\05-associacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\paradigmas\\04-agregacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:paradigmas\\04-agregacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\paradigmas\\03-herenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|solutionrelative:paradigmas\\03-herenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBDDE041-6771-4104-8C4C-151E71F63B87}|Curso CSharp.csproj|c:\\users\\aluno noite\\documents\\github\\curso-csharp-vs2022\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,29 +42,80 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "07-Multiplicidade.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\07-Multiplicidade.cs",
+              "RelativeDocumentMoniker": "Paradigmas\\07-Multiplicidade.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\07-Multiplicidade.cs",
+              "RelativeToolTip": "Paradigmas\\07-Multiplicidade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:14:34.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "06-Composicao.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\06-Composicao.cs",
+              "RelativeDocumentMoniker": "Paradigmas\\06-Composicao.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\06-Composicao.cs",
+              "RelativeToolTip": "Paradigmas\\06-Composicao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:14:18.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "05-Associacao.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\05-Associacao.cs",
+              "RelativeDocumentMoniker": "Paradigmas\\05-Associacao.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\05-Associacao.cs",
+              "RelativeToolTip": "Paradigmas\\05-Associacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:14:00.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "04-Agregacao.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\04-Agregacao.cs",
+              "RelativeDocumentMoniker": "Paradigmas\\04-Agregacao.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\04-Agregacao.cs",
+              "RelativeToolTip": "Paradigmas\\04-Agregacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:13:41.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "03-Herenca.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\03-Herenca.cs",
+              "RelativeDocumentMoniker": "Paradigmas\\03-Herenca.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Paradigmas\\03-Herenca.cs",
+              "RelativeToolTip": "Paradigmas\\03-Herenca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:13:22.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T18:20:40.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Exercicio0309.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\Exercicio0309.cs",
-              "RelativeDocumentMoniker": "Exercicios\\Exercicio0309.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Exercicios\\Exercicio0309.cs",
-              "RelativeToolTip": "Exercicios\\Exercicio0309.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T17:14:00.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T18:20:40.532Z"
             }
           ]
         }

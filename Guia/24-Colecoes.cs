@@ -13,7 +13,7 @@ namespace CursoCSharp.Guia
             Console.WriteLine("=== Dictionary ===");
             // O Dictionary armazena pares de chave-valor.
             Dictionary<int, string> dicionario = new Dictionary<int, string>();
-            dicionario.Add(1, "Um");
+            dicionario.Add(1, "Um"); //Chave (1) e valor ("Um")
             dicionario.Add(2, "Dois");
             dicionario.Add(3, "Três");
 
