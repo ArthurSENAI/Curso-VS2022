@@ -1,0 +1,12 @@
+[
+  {
+    "Numero": "V001",
+    "Destino": "São Paulo",
+    "Data": "2024-09-15T00:00:00"
+  },
+  {
+    "Numero": "V002",
+    "Destino": "Rio de Janeiro",
+    "Data": "2024-09-16T00:00:00"
+  }
+]
