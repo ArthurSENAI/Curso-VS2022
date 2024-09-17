@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 namespace CursoCSharp
 {
     // Classe Passageiro
-    public class Passageiro
+    class Passageiro
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
-        public string Cpf { get; set; }
+        public string CPF { get; set; }
         private List<Voo> voos = new List<Voo>();
 
-        public Passageiro() { }
-
-        public Passageiro(string nome, string cpf)
+        public Passageiro(int id, string nome, string cpf)
         {
+            Id = id;
             Nome = nome;
-            Cpf = cpf;
+            CPF = cpf;
         }
 
         public void AdicionarVoo(Voo voo, Aeroporto aeroporto)
         {
-            if (voo != null && !voos.Contains(voo))
+            if (!voos.Contains(voo))
             {
                 voos.Add(voo);
             }
@@ -31,56 +31,62 @@ namespace CursoCSharp
 
         public List<Voo> ObterVoos()
         {
-            return new List<Voo>(voos);
+            return voos;
         }
     }
 
-
-    public class Voo
+    class Voo
     {
+        public int Id { get; set; }
         public string Numero { get; set; }
+        public string Origem { get; set; }
         public string Destino { get; set; }
-        public DateTime Data { get; set; }
 
-        public Voo() { }
-
-        public Voo(string numero, string destino, DateTime data)
+        public Voo(int id, string numero, string origem, string destino)
         {
+            Id = id;
             Numero = numero;
+            Origem = origem;
             Destino = destino;
-            Data = data;
         }
 
         public void ExibirDetalhes()
         {
-            Console.WriteLine($"Número: {Numero}");
-            Console.WriteLine($"Destino: {Destino}");
-            Console.WriteLine($"Data: {Data:dd/MM/yyyy}");
+            Console.WriteLine($"ID: {Id} - Número: {Numero} - Origem: {Origem} - Destino: {Destino}");
         }
     }
 
-
-    public class Aeroporto
+    class Aeroporto
     {
         private List<Voo> voos = new List<Voo>();
 
         public void AdicionarVoo(Voo voo)
         {
-            if (voo != null && !voos.Any(v => v.Numero == voo.Numero))
+            if (!voos.Any(v => v.Id == voo.Id))
             {
                 voos.Add(voo);
             }
         }
 
-        public List<Voo> ObterVoos()
+        public void RemoverVoo(int idVoo)
         {
-            return new List<Voo>(voos);
+            var voo = voos.FirstOrDefault(v => v.Id == idVoo);
+            if (voo != null)
+            {
+                voos.Remove(voo);
+            }
         }
 
-        public Voo BuscarVooPorNumero(string numero)
+        public Voo BuscarVooPorId(int id)
         {
-            return voos.FirstOrDefault(v => v.Numero == numero);
+            return voos.FirstOrDefault(v => v.Id == id);
+        }
+
+        public List<Voo> ObterVoos()
+        {
+            return voos;
         }
     }
+
 
 }

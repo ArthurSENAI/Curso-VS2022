@@ -1,12 +1,14 @@
 [
   {
+    "Id": 1,
     "Numero": "V001",
-    "Destino": "São Paulo",
-    "Data": "2024-09-15T00:00:00"
+    "Origem": "BSB",
+    "Destino": "BAL"
   },
   {
-    "Numero": "V002",
-    "Destino": "Rio de Janeiro",
-    "Data": "2024-09-16T00:00:00"
+    "Id": 2,
+    "Numero": "BB456",
+    "Origem": "Rio de Janeiro",
+    "Destino": "Salvador"
   }
 ]

@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.VisualBasic;
+
 
 
 namespace GerenciamentoAeroporto
@@ -16,9 +18,13 @@ namespace GerenciamentoAeroporto
     {
         static List<Passageiro> passageiros = new List<Passageiro>();
         static Aeroporto aeroporto = new Aeroporto();
+        static string DateAndTime = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        static Dictionary<int, List<int>> passageirosPorVoo = new Dictionary<int, List<int>>();
         static string arquivoPassageiros = @"C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\JSON\passageiros.json";
         static string arquivoVoos = @"C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\JSON\voos.json";
         static string arquivoPassageirosPorVoo = @"C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\JSON\passageirosPorVoo.json";
+        static int proximoIdPassageiro = 1;
+        static int proximoIdVoo = 1;
 
         static void Main(string[] args)
         {
@@ -29,11 +35,13 @@ namespace GerenciamentoAeroporto
             {
                 Console.Clear();
                 Console.WriteLine("==============================================");
-                Console.WriteLine("==========   SISTEMA DE GERENCIAMENTO   ======");
-                Console.WriteLine("==============================================\n");
+                Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("Autor: Arthur =============" + DateAndTime +  "\n");
                 Console.WriteLine("1. Gerenciar Voos");
                 Console.WriteLine("2. Gerenciar Passageiros");
                 Console.WriteLine("0. Sair");
+                Console.WriteLine("\n==============================================");
 
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
@@ -64,14 +72,18 @@ namespace GerenciamentoAeroporto
             {
                 Console.Clear();
                 Console.WriteLine("==============================================");
-                Console.WriteLine("==========   GERENCIAR VOOS   ============");
-                Console.WriteLine("==============================================\n");
+                Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
                 Console.WriteLine("1. Adicionar Voo");
                 Console.WriteLine("2. Listar Voos");
-                Console.WriteLine("3. Adicionar Passageiro a Voo");
-                Console.WriteLine("4. Listar Passageiros de um Voo");
+                Console.WriteLine("3. Atualizar Voo");
+                Console.WriteLine("4. Adicionar Passageiro a Voo");
+                Console.WriteLine("5. Listar Passageiros de um Voo");
+                Console.WriteLine("6. Excluir Voo");
                 Console.WriteLine("0. Voltar");
-                Console.WriteLine("==============================================");
+                Console.WriteLine("\n==============================================");
+
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -84,10 +96,16 @@ namespace GerenciamentoAeroporto
                         ListarVoos();
                         break;
                     case 3:
-                        AdicionarPassageiroAVoo();
+                        AtualizarVoo();
                         break;
                     case 4:
+                        AdicionarPassageiroAVoo();
+                        break;
+                    case 5:
                         ListarPassageirosDeVoo();
+                        break;
+                    case 6:
+                        ExcluirVoo();
                         break;
                     case 0:
                         Console.WriteLine("\nVoltando ao menu principal...");
@@ -108,12 +126,16 @@ namespace GerenciamentoAeroporto
             {
                 Console.Clear();
                 Console.WriteLine("==============================================");
-                Console.WriteLine("==========   GERENCIAR PASSAGEIROS   ============");
-                Console.WriteLine("==============================================\n");
+                Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+                Console.WriteLine("==============================================");
+                Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
                 Console.WriteLine("1. Adicionar Passageiro");
                 Console.WriteLine("2. Listar Passageiros");
+                Console.WriteLine("3. Atualizar Passageiro");
+                Console.WriteLine("4. Excluir Passageiro");
                 Console.WriteLine("0. Voltar");
-                Console.WriteLine("==============================================");
+                Console.WriteLine("\n==============================================");
+
                 Console.Write("Escolha uma opção: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -124,6 +146,12 @@ namespace GerenciamentoAeroporto
                         break;
                     case 2:
                         ListarPassageiros();
+                        break;
+                    case 3:
+                        AtualizarPassageiro();
+                        break;
+                    case 4:
+                        ExcluirPassageiro();
                         break;
                     case 0:
                         Console.WriteLine("\nVoltando ao menu principal...");
@@ -141,41 +169,98 @@ namespace GerenciamentoAeroporto
         {
             Console.Clear();
             Console.WriteLine("==============================================");
-            Console.WriteLine("=========   ADICIONAR NOVO PASSAGEIRO   =========");
+            Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======== ADICIONAR NOVO PASSAGEIRO ==========");
             Console.WriteLine("==============================================");
             Console.Write("Digite o nome do passageiro: ");
             string nome = Console.ReadLine();
             Console.Write("Digite o CPF do passageiro: ");
             string cpf = Console.ReadLine();
 
-            if (passageiros.Any(p => p.Cpf == cpf))
-            {
-                Console.WriteLine("\nPassageiro com este CPF já existe.");
-                return;
-            }
-
-            Passageiro passageiro = new Passageiro(nome, cpf);
-            passageiros.Add(passageiro);
+            Passageiro novoPassageiro = new Passageiro(proximoIdPassageiro++, nome, cpf);
+            passageiros.Add(novoPassageiro);
             Console.WriteLine("\nPassageiro adicionado com sucesso!");
             SalvarPassageiros();
         }
 
         static void ListarPassageiros()
         {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======= LISTA DE PASSAGEIROS ================");
+            Console.WriteLine("==============================================");
+
             if (passageiros.Count == 0)
             {
                 Console.WriteLine("\nNenhum passageiro cadastrado.");
             }
             else
             {
-                Console.WriteLine("==============================================");
-                Console.WriteLine("=========   LISTA DE PASSAGEIROS   =========");
-                Console.WriteLine("==============================================");
-
-                for (int i = 0; i < passageiros.Count; i++)
+                foreach (var passageiro in passageiros)
                 {
-                    Console.WriteLine($"{i + 1}. {passageiros[i].Nome} - CPF: {passageiros[i].Cpf}");
+                    Console.WriteLine($"ID: {passageiro.Id} - Nome: {passageiro.Nome} - CPF: {passageiro.CPF}");
                 }
+            }
+        }
+
+        static void AtualizarPassageiro()
+        {
+            ListarPassageiros();
+
+            Console.Write("\nDigite o ID do passageiro a ser atualizado: ");
+            if (int.TryParse(Console.ReadLine(), out int idPassageiro))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == idPassageiro);
+                if (passageiro != null)
+                {
+                    Console.Write("Digite o novo nome do passageiro: ");
+                    passageiro.Nome = Console.ReadLine();
+                    Console.Write("Digite o novo CPF do passageiro: ");
+                    passageiro.CPF = Console.ReadLine();
+
+                    Console.WriteLine("\nPassageiro atualizado com sucesso.");
+                    SalvarPassageiros();
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+        static void ExcluirPassageiro()
+        {
+            ListarPassageiros();
+
+            Console.Write("\nDigite o ID do passageiro a ser excluído: ");
+            if (int.TryParse(Console.ReadLine(), out int idPassageiro))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == idPassageiro);
+                if (passageiro != null)
+                {
+                    passageiros.Remove(passageiro);
+                    Console.WriteLine("\nPassageiro removido com sucesso.");
+                    SalvarPassageiros();
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
             }
         }
 
@@ -183,23 +268,36 @@ namespace GerenciamentoAeroporto
         {
             Console.Clear();
             Console.WriteLine("==============================================");
-            Console.WriteLine("=========   ADICIONAR NOVO VOO   ===========");
+            Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======== ADICIONAR NOVO VOO ================");
             Console.WriteLine("==============================================");
             Console.Write("Digite o número do voo: ");
             string numero = Console.ReadLine();
-            Console.Write("Digite o destino: ");
+            Console.Write("Digite a origem do voo: ");
+            string origem = Console.ReadLine();
+            Console.Write("Digite o destino do voo: ");
             string destino = Console.ReadLine();
-            Console.Write("Digite a data do voo (dd/mm/yyyy): ");
-            DateTime data = DateTime.Parse(Console.ReadLine());
 
-            Voo voo = new Voo(numero, destino, data);
-            aeroporto.AdicionarVoo(voo);
+            Voo novoVoo = new Voo(proximoIdVoo++, numero, origem, destino);
+            aeroporto.AdicionarVoo(novoVoo);
             Console.WriteLine("\nVoo adicionado com sucesso!");
             SalvarVoos();
         }
 
         static void ListarVoos()
         {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("=========== LISTA DE VOOS ==================");
+            Console.WriteLine("==============================================");
+
             var voos = aeroporto.ObterVoos();
             if (voos.Count == 0)
             {
@@ -207,10 +305,6 @@ namespace GerenciamentoAeroporto
             }
             else
             {
-                Console.WriteLine("==============================================");
-                Console.WriteLine("=========   LISTA DE VOOS   ============");
-                Console.WriteLine("==============================================");
-
                 foreach (var voo in voos)
                 {
                     voo.ExibirDetalhes();
@@ -218,60 +312,159 @@ namespace GerenciamentoAeroporto
             }
         }
 
-        static void AdicionarPassageiroAVoo()
+        static void AtualizarVoo()
         {
-            ListarPassageiros();
-            Console.Write("\nDigite o número do passageiro a ser adicionado ao voo: ");
-            int passageiroIndice = int.Parse(Console.ReadLine()) - 1;
+            ListarVoos();
 
-            if (passageiroIndice >= 0 && passageiroIndice < passageiros.Count)
+            Console.Write("\nDigite o ID do voo a ser atualizado: ");
+            if (int.TryParse(Console.ReadLine(), out int idVoo))
             {
-                Passageiro passageiro = passageiros[passageiroIndice];
-                Console.Write("Digite o número do voo: ");
-                string numeroVoo = Console.ReadLine();
-                Voo voo = aeroporto.BuscarVooPorNumero(numeroVoo);
-
+                var voo = aeroporto.BuscarVooPorId(idVoo);
                 if (voo != null)
                 {
-                    passageiro.AdicionarVoo(voo, aeroporto);
-                    SalvarPassageiroPorVoo();
+                    Console.Write("Digite o novo número do voo: ");
+                    voo.Numero = Console.ReadLine();
+                    Console.Write("Digite a nova origem do voo: ");
+                    voo.Origem = Console.ReadLine();
+                    Console.Write("Digite o novo destino do voo: ");
+                    voo.Destino = Console.ReadLine();
+
+                    Console.WriteLine("\nVoo atualizado com sucesso.");
+                    SalvarVoos();
                 }
                 else
                 {
-                    Console.WriteLine("\nVoo não encontrado.");
+                    Console.WriteLine("\nVoo com o ID informado não encontrado.");
                 }
             }
             else
             {
-                Console.WriteLine("\nNúmero de passageiro inválido.");
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+        static void ExcluirVoo()
+        {
+            ListarVoos();
+
+            Console.Write("\nDigite o ID do voo a ser excluído: ");
+            if (int.TryParse(Console.ReadLine(), out int idVoo))
+            {
+                var voo = aeroporto.BuscarVooPorId(idVoo);
+                if (voo != null)
+                {
+                    aeroporto.RemoverVoo(idVoo);
+                    passageirosPorVoo = passageirosPorVoo
+                        .Where(p => p.Value.Contains(idVoo))
+                        .ToDictionary(p => p.Key, p => p.Value.Where(v => v != idVoo).ToList());
+
+                    Console.WriteLine("\nVoo removido com sucesso.");
+                    SalvarVoos();
+                    SalvarPassageirosPorVoo();
+                }
+                else
+                {
+                    Console.WriteLine("\nVoo com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+        static void AdicionarPassageiroAVoo()
+        {
+            Console.Clear();
+            Console.WriteLine("==============================================");
+            Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
+            Console.WriteLine("==============================================");
+            Console.WriteLine("==== ADICIONAR PASSAGEIRO A VOO ==============");
+            Console.WriteLine("==============================================");
+
+            ListarPassageiros();
+            Console.Write("\nDigite o ID do passageiro: ");
+            if (int.TryParse(Console.ReadLine(), out int passageiroId))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == passageiroId);
+                if (passageiro != null)
+                {
+                    ListarVoos();
+                    Console.Write("\nDigite o ID do voo: ");
+                    if (int.TryParse(Console.ReadLine(), out int vooId))
+                    {
+                        Voo voo = aeroporto.BuscarVooPorId(vooId);
+                        if (voo != null)
+                        {
+                            passageiro.AdicionarVoo(voo, aeroporto);
+
+                            if (!passageirosPorVoo.ContainsKey(passageiroId))
+                            {
+                                passageirosPorVoo[passageiroId] = new List<int>();
+                            }
+
+                            if (!passageirosPorVoo[passageiroId].Contains(vooId))
+                            {
+                                passageirosPorVoo[passageiroId].Add(vooId);
+                            }
+
+                            SalvarPassageirosPorVoo();
+                            Console.WriteLine("\nPassageiro adicionado ao voo com sucesso!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nVoo não encontrado.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nID do voo inválido.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID do passageiro inválido.");
             }
         }
 
         static void ListarPassageirosDeVoo()
         {
-            Console.Write("Digite o número do voo: ");
-            string numeroVoo = Console.ReadLine();
-            Voo voo = aeroporto.BuscarVooPorNumero(numeroVoo);
-
-            if (voo != null)
+            Console.Clear();
+            Console.Write("Digite o ID do voo: ");
+            if (int.TryParse(Console.ReadLine(), out int vooId))
             {
-                var passageirosVoo = passageiros.Where(p => p.ObterVoos().Any(v => v.Numero == numeroVoo)).ToList();
-                if (passageirosVoo.Count > 0)
+                Voo voo = aeroporto.BuscarVooPorId(vooId);
+                if (voo != null)
                 {
-                    Console.WriteLine($"Passageiros do voo {numeroVoo}:");
-                    foreach (var passageiro in passageirosVoo)
+                    var passageirosVoo = passageiros.Where(p => p.ObterVoos().Any(v => v.Id == vooId)).ToList();
+                    Console.WriteLine($"Passageiros do voo {vooId}:");
+                    if (passageirosVoo.Count > 0)
                     {
-                        Console.WriteLine($"{passageiro.Nome} - CPF: {passageiro.Cpf}");
+                        foreach (var passageiro in passageirosVoo)
+                        {
+                            Console.WriteLine($"Nome: {passageiro.Nome} - CPF: {passageiro.CPF}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Nenhum passageiro encontrado para o voo {vooId}.");
                     }
                 }
                 else
                 {
-                    Console.WriteLine($"Nenhum passageiro encontrado para o voo {numeroVoo}.");
+                    Console.WriteLine("Voo não encontrado.");
                 }
             }
             else
             {
-                Console.WriteLine("Voo não encontrado.");
+                Console.WriteLine("\nID do voo inválido.");
             }
         }
 
@@ -287,82 +480,50 @@ namespace GerenciamentoAeroporto
             if (File.Exists(arquivoPassageiros))
             {
                 string json = File.ReadAllText(arquivoPassageiros);
-                if (string.IsNullOrWhiteSpace(json))
+                passageiros = JsonSerializer.Deserialize<List<Passageiro>>(json) ?? new List<Passageiro>();
+
+                if (passageiros.Count > 0)
                 {
-                    Console.WriteLine("O arquivo JSON de passageiros está vazio.");
-                    passageiros = new List<Passageiro>();
+                    proximoIdPassageiro = passageiros.Max(p => p.Id) + 1;
                 }
-                else
-                {
-                    try
-                    {
-                        passageiros = JsonSerializer.Deserialize<List<Passageiro>>(json) ?? new List<Passageiro>();
-                    }
-                    catch (JsonException ex)
-                    {
-                        Console.WriteLine($"Erro ao desserializar o JSON dos passageiros: {ex.Message}");
-                        passageiros = new List<Passageiro>();
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("Arquivo JSON de passageiros não encontrado.");
-                passageiros = new List<Passageiro>();
             }
         }
-
 
         static void CarregarVoos()
         {
             if (File.Exists(arquivoVoos))
             {
                 string json = File.ReadAllText(arquivoVoos);
-                if (string.IsNullOrWhiteSpace(json))
+                var voos = JsonSerializer.Deserialize<List<Voo>>(json) ?? new List<Voo>();
+                foreach (var voo in voos)
                 {
-                    Console.WriteLine("O arquivo JSON de voos está vazio.");
+                    aeroporto.AdicionarVoo(voo);
                 }
-                else
+
+                if (voos.Count > 0)
                 {
-                    try
-                    {
-                        var voos = JsonSerializer.Deserialize<List<Voo>>(json) ?? new List<Voo>();
-                        voos.ForEach(voo => aeroporto.AdicionarVoo(voo));
-                    }
-                    catch (JsonException ex)
-                    {
-                        Console.WriteLine($"Erro ao desserializar o JSON dos voos: {ex.Message}");
-                    }
+                    proximoIdVoo = voos.Max(v => v.Id) + 1;
                 }
-            }
-            else
-            {
-                Console.WriteLine("Arquivo JSON de voos não encontrado.");
             }
         }
-
 
         static void CarregarPassageirosPorVoo()
         {
             if (File.Exists(arquivoPassageirosPorVoo))
             {
                 string json = File.ReadAllText(arquivoPassageirosPorVoo);
-                if (string.IsNullOrWhiteSpace(json))
-                {
-                    Console.WriteLine("O arquivo JSON de passageiros por voo está vazio.");
-                }
-                else
+                if (!string.IsNullOrWhiteSpace(json))
                 {
                     try
                     {
-                        var passageirosPorVoo = JsonSerializer.Deserialize<Dictionary<string, List<string>>>(json) ?? new Dictionary<string, List<string>>();
+                        passageirosPorVoo = JsonSerializer.Deserialize<Dictionary<int, List<int>>>(json) ?? new Dictionary<int, List<int>>();
 
                         foreach (var entry in passageirosPorVoo)
                         {
-                            Passageiro passageiro = passageiros.FirstOrDefault(p => p.Cpf == entry.Key);
-                            foreach (var numeroVoo in entry.Value)
+                            Passageiro passageiro = passageiros.FirstOrDefault(p => p.Id == entry.Key);
+                            foreach (var vooId in entry.Value)
                             {
-                                Voo voo = aeroporto.BuscarVooPorNumero(numeroVoo);
+                                Voo voo = aeroporto.BuscarVooPorId(vooId);
                                 if (passageiro != null && voo != null)
                                 {
                                     passageiro.AdicionarVoo(voo, aeroporto);
@@ -376,35 +537,26 @@ namespace GerenciamentoAeroporto
                     }
                 }
             }
-            else
-            {
-                Console.WriteLine("Arquivo JSON de passageiros por voo não encontrado.");
-            }
         }
-
 
         static void SalvarPassageiros()
         {
-            string json = JsonSerializer.Serialize(passageiros);
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(passageiros, options);
             File.WriteAllText(arquivoPassageiros, json);
         }
 
         static void SalvarVoos()
         {
-            string json = JsonSerializer.Serialize(aeroporto.ObterVoos());
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(aeroporto.ObterVoos(), options);
             File.WriteAllText(arquivoVoos, json);
         }
 
-        static void SalvarPassageiroPorVoo()
+        static void SalvarPassageirosPorVoo()
         {
-            var passageirosPorVoo = new Dictionary<string, List<string>>();
-
-            foreach (var passageiro in passageiros)
-            {
-                passageirosPorVoo[passageiro.Cpf] = passageiro.ObterVoos().Select(v => v.Numero).ToList();
-            }
-
-            string json = JsonSerializer.Serialize(passageirosPorVoo);
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(passageirosPorVoo, options);
             File.WriteAllText(arquivoPassageirosPorVoo, json);
         }
 
@@ -412,7 +564,7 @@ namespace GerenciamentoAeroporto
         {
             SalvarPassageiros();
             SalvarVoos();
-            SalvarPassageiroPorVoo();
+            SalvarPassageirosPorVoo();
         }
     }
 }

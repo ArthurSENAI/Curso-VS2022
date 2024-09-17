@@ -1,1 +1,23 @@
-[{"Numero":"001","Destino":"BSB","Data":"2000-01-01T00:00:00"}]
+[
+  {
+    "Id": 1,
+    "Numero": "V001",
+    "Origem": "BSB",
+    "Destino": "RIO",
+    "Passageiros": []
+  },
+  {
+    "Id": 2,
+    "Numero": "V002",
+    "Origem": "BSB",
+    "Destino": "AJU",
+    "Passageiros": []
+  },
+  {
+    "Id": 3,
+    "Numero": "V003",
+    "Origem": "AJU",
+    "Destino": "GAL",
+    "Passageiros": []
+  }
+]
