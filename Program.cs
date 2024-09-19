@@ -325,9 +325,20 @@ namespace GerenciamentoAeroporto
                 var passageiro = passageiros.FirstOrDefault(p => p.Id == idPassageiro);
                 if (passageiro != null)
                 {
+                    // Remover todos os voos associados ao passageiro
+                    foreach (var voo in passageiro.ObterVoos())
+                    {
+                        aeroporto.RemoverVoo(voo.Id);  // Remover o voo do aeroporto
+                        passageirosPorVoo = passageirosPorVoo
+                            .Where(p => p.Value.Contains(voo.Id))
+                            .ToDictionary(p => p.Key, p => p.Value.Where(v => v != voo.Id).ToList());
+                    }
+
                     passageiros.Remove(passageiro);
                     Console.WriteLine("\nPassageiro removido com sucesso.");
                     SalvarPassageiros();
+                    SalvarVoos();
+                    SalvarPassageirosPorVoo();
                 }
                 else
                 {
@@ -339,7 +350,6 @@ namespace GerenciamentoAeroporto
                 Console.WriteLine("\nID inválido.");
             }
         }
-
 
         static void AdicionarVoo()
         {
@@ -531,18 +541,20 @@ namespace GerenciamentoAeroporto
                         Voo voo = aeroporto.BuscarVooPorId(vooId);
                         if (voo != null)
                         {
-                            passageiro.AdicionarVoo(voo);
-                            if (passageirosPorVoo.ContainsKey(passageiro))
+                            passageiro.AdicionarVoo(voo, aeroporto); // Adiciona o voo ao passageiro
+
+                            if (!passageirosPorVoo.ContainsKey(passageiroId))
                             {
-                                passageirosPorVoo[passageiro].Add(vooId);
+                                passageirosPorVoo[passageiroId] = new List<int>();
                             }
-                            else
+
+                            if (!passageirosPorVoo[passageiroId].Contains(vooId))
                             {
-                                passageirosPorVoo[passageiro] = new List<int> { vooId };
+                                passageirosPorVoo[passageiroId].Add(vooId);
                             }
-                            Console.WriteLine("\nPassageiro adicionado ao voo com sucesso.");
-                            SalvarPassageiros();
-                            SalvarVoos();
+
+                            SalvarPassageirosPorVoo();
+                            Console.WriteLine("\nPassageiro adicionado ao voo com sucesso!");
                         }
                         else
                         {
@@ -624,39 +636,33 @@ namespace GerenciamentoAeroporto
             Console.ReadKey();
         }
 
-        static void RemoverPassageiroDoVoo()
+        static void RemoverVooDePassageiro()
         {
             ListarPassageiros();
+
             Console.Write("\nDigite o ID do passageiro: ");
-            if (int.TryParse(Console.ReadLine(), out int passageiroId))
+            if (int.TryParse(Console.ReadLine(), out int idPassageiro))
             {
-                var passageiro = passageiros.FirstOrDefault(p => p.Id == passageiroId);
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == idPassageiro);
                 if (passageiro != null)
                 {
                     ListarVoos();
-                    Console.Write("\nDigite o ID do voo: ");
-                    if (int.TryParse(Console.ReadLine(), out int vooId))
+
+                    Console.Write("\nDigite o ID do voo a ser removido do passageiro: ");
+                    if (int.TryParse(Console.ReadLine(), out int idVoo))
                     {
-                        Voo voo = aeroporto.BuscarVooPorId(vooId);
-                        if (voo != null)
+                        // Remove o voo da lista do passageiro
+                        passageiro.RemoverVoo(idVoo);
+
+                        // Atualize o dicionário de passageirosPorVoo
+                        if (passageirosPorVoo.ContainsKey(idPassageiro))
                         {
-                            passageiro.RemoverVoo(voo);
-                            if (passageirosPorVoo.ContainsKey(passageiro))
-                            {
-                                passageirosPorVoo[passageiro].Remove(vooId);
-                                if (!passageirosPorVoo[passageiro].Any())
-                                {
-                                    passageirosPorVoo.Remove(passageiro);
-                                }
-                            }
-                            Console.WriteLine("\nPassageiro removido do voo com sucesso.");
-                            SalvarPassageiros();
-                            SalvarVoos();
+                            passageirosPorVoo[idPassageiro].Remove(idVoo);
                         }
-                        else
-                        {
-                            Console.WriteLine("\nVoo com o ID informado não encontrado.");
-                        }
+
+                        SalvarPassageiros();
+                        SalvarPassageirosPorVoo();
+                        Console.WriteLine("\nVoo removido do passageiro com sucesso!");
                     }
                     else
                     {
@@ -665,7 +671,7 @@ namespace GerenciamentoAeroporto
                 }
                 else
                 {
-                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                    Console.WriteLine("\nPassageiro não encontrado.");
                 }
             }
             else
@@ -673,6 +679,7 @@ namespace GerenciamentoAeroporto
                 Console.WriteLine("\nID do passageiro inválido.");
             }
         }
+
 
         static void CarregarDados()
         {

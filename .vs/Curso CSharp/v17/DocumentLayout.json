@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAP8BAAAAAAAAAAAgwKMCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4CAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T17:35:42.056Z",
               "IsPinned": true,
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "ProgramAeroporto.cs",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\GitHub\\Curso-CSharp-VS2022\\ProgramAeroporto.cs",
               "RelativeToolTip": "ProgramAeroporto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:35:00.757Z",
               "EditorCaption": ""
@@ -73,8 +73,7 @@
               "RelativeToolTip": "JSON\\passageirosPorVoo.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-16T18:49:47.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T18:49:47.376Z"
             },
             {
               "$type": "Document",
