@@ -40,9 +40,10 @@ namespace GerenciamentoAeroporto
                 Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
                 Console.WriteLine($"║ Autor: Arthur ============= {DateAndTime} ║");
                 Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
-                Console.WriteLine("║ 1. Gerenciar Voos                                                         ║");
-                Console.WriteLine("║ 2. Gerenciar Passageiros                                                   ║");
-                Console.WriteLine("║ 0. Sair                                                                    ║");
+                Console.WriteLine("║ 1. Gerenciar Voos                                                           ║");
+                Console.WriteLine("║ 2. Gerenciar Passageiros                                                    ║");
+                Console.WriteLine("║ 3. Gerar Relatorio                                                          ║");
+                Console.WriteLine("║ 0. Sair                                                                     ║");
                 Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
 
                 Console.Write("Escolha uma opção: ");
@@ -55,6 +56,9 @@ namespace GerenciamentoAeroporto
                             break;
                         case 2:
                             MenuPassageiros();
+                            break;
+                        case 3:
+                            GerenciarRelatorio();
                             break;
                         case 0:
                             SalvarDados();
@@ -83,17 +87,18 @@ namespace GerenciamentoAeroporto
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
-                Console.WriteLine("║                           GERENCIAMENTO DE VOOS                              ║");
+                Console.WriteLine("║                           GERENCIAMENTO DE VOOS                             ║");
                 Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
-                Console.WriteLine($"║ Autor: Arthur ============= {DateAndTime} ║");
+                Console.WriteLine($"║ Autor: Arthur ========================================= {DateAndTime} ║");
                 Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
-                Console.WriteLine("║ 1. Adicionar Voo                                                           ║");
-                Console.WriteLine("║ 2. Listar Voos                                                             ║");
-                Console.WriteLine("║ 3. Atualizar Voo                                                           ║");
+                Console.WriteLine("║ 1. Adicionar Voo                                                            ║");
+                Console.WriteLine("║ 2. Listar Voos                                                              ║");
+                Console.WriteLine("║ 3. Atualizar Voo                                                            ║");
                 Console.WriteLine("║ 4. Adicionar Passageiro a Voo                                               ║");
-                Console.WriteLine("║ 5. Listar Passageiros de um Voo                                              ║");
-                Console.WriteLine("║ 6. Excluir Voo                                                              ║");
-                Console.WriteLine("║ 0. Voltar                                                                  ║");
+                Console.WriteLine("║ 5. Listar Passageiros de um Voo                                             ║");
+                Console.WriteLine("║ 6. Remover Passageiros de um Voo                                            ║");
+                Console.WriteLine("║ 7. Excluir Voo                                                              ║");
+                Console.WriteLine("║ 0. Voltar                                                                   ║");
                 Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
 
                 Console.Write("Escolha uma opção: ");
@@ -117,6 +122,9 @@ namespace GerenciamentoAeroporto
                             ListarPassageirosDeVoo();
                             break;
                         case 6:
+                            RemoverVooDePassageiro();
+                            break;
+                        case 7:
                             ExcluirVoo();
                             break;
                         case 0:
@@ -396,9 +404,9 @@ namespace GerenciamentoAeroporto
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║                              LISTA DE VOOS                                    ║");
+            Console.WriteLine("║                              LISTA DE VOOS                                  ║");
             Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
-            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                                               ║");
             Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
             Console.ResetColor();
 
@@ -678,6 +686,58 @@ namespace GerenciamentoAeroporto
             {
                 Console.WriteLine("\nID do passageiro inválido.");
             }
+        }
+
+        static void GerenciarRelatorio()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                      RELATÓRIO DE VOOS E PASSAGEIROS                         ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            // Itera sobre todos os voos
+            foreach (var voo in aeroporto.ObterVoos())
+            {
+                // Obtém a lista de passageiros para o voo atual
+                var passageirosNoVoo = passageirosPorVoo
+                    .Where(p => p.Value.Contains(voo.Id))
+                    .Select(p => passageiros.FirstOrDefault(pass => pass.Id == p.Key))
+                    .Where(p => p != null)
+                    .ToList();
+
+                // Exibe informações do voo
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine($"║ Voo ID: {voo.Id.ToString().PadRight(35)}                                 ║");
+                Console.WriteLine($"║ Número: {voo.Numero.PadRight(30)}                                      ║");
+                Console.WriteLine($"║ Origem: {voo.Origem.PadRight(30)}                                      ║");
+                Console.WriteLine($"║ Destino: {voo.Destino.PadRight(30)}                                     ║");
+                Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
+                Console.WriteLine("║ Passageiros:                                                                ║");
+                Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
+
+                if (passageirosNoVoo.Any())
+                {
+                    foreach (var passageiro in passageirosNoVoo)
+                    {
+                        Console.WriteLine($"║ ID - {passageiro.Id.ToString()}.   {passageiro.Nome.PadRight(32)}                                  ║");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("║ Nenhum passageiro para este voo.                                            ║");
+                }
+
+                // Linha de rodapé para cada voo
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+                Console.WriteLine();
+            }
+
+            Console.ResetColor();
+            Console.WriteLine("Pressione Enter para voltar ao menu...");
+            Console.ReadKey();
         }
 
 
