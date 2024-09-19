@@ -34,10 +34,775 @@ namespace GerenciamentoAeroporto
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                           GERENCIAMENTO DE AEROPORTO                        ║");
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+                Console.WriteLine($"║ Autor: Arthur ============= {DateAndTime} ║");
+                Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
+                Console.WriteLine("║ 1. Gerenciar Voos                                                         ║");
+                Console.WriteLine("║ 2. Gerenciar Passageiros                                                   ║");
+                Console.WriteLine("║ 0. Sair                                                                    ║");
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+
+                Console.Write("Escolha uma opção: ");
+                if (int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    switch (opcao)
+                    {
+                        case 1:
+                            MenuVoos();
+                            break;
+                        case 2:
+                            MenuPassageiros();
+                            break;
+                        case 0:
+                            SalvarDados();
+                            Console.WriteLine("\nSaindo do programa...");
+                            break;
+                        default:
+                            Console.WriteLine("\nOpção inválida, tente novamente.");
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nOpção inválida, tente novamente.");
+                }
+
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey();
+            } while (opcao != 0);
+        }
+
+        static void MenuVoos()
+        {
+            int opcao = 0;
+            do
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                           GERENCIAMENTO DE VOOS                              ║");
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+                Console.WriteLine($"║ Autor: Arthur ============= {DateAndTime} ║");
+                Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
+                Console.WriteLine("║ 1. Adicionar Voo                                                           ║");
+                Console.WriteLine("║ 2. Listar Voos                                                             ║");
+                Console.WriteLine("║ 3. Atualizar Voo                                                           ║");
+                Console.WriteLine("║ 4. Adicionar Passageiro a Voo                                               ║");
+                Console.WriteLine("║ 5. Listar Passageiros de um Voo                                              ║");
+                Console.WriteLine("║ 6. Excluir Voo                                                              ║");
+                Console.WriteLine("║ 0. Voltar                                                                  ║");
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+
+                Console.Write("Escolha uma opção: ");
+                if (int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    switch (opcao)
+                    {
+                        case 1:
+                            AdicionarVoo();
+                            break;
+                        case 2:
+                            ListarVoos();
+                            break;
+                        case 3:
+                            AtualizarVoo();
+                            break;
+                        case 4:
+                            AdicionarPassageiroAVoo();
+                            break;
+                        case 5:
+                            ListarPassageirosDeVoo();
+                            break;
+                        case 6:
+                            ExcluirVoo();
+                            break;
+                        case 0:
+                            Console.WriteLine("\nVoltando ao menu principal...");
+                            break;
+                        default:
+                            Console.WriteLine("\nOpção inválida, tente novamente.");
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nOpção inválida, tente novamente.");
+                }
+
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey();
+            } while (opcao != 0);
+        }
+
+        static void MenuPassageiros()
+        {
+            int opcao = 0;
+            do
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine("║                         GERENCIAMENTO DE PASSAGEIROS                          ║");
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+                Console.WriteLine($"║ Autor: Arthur ============= {DateAndTime} ║");
+                Console.WriteLine("╠═════════════════════════════════════════════════════════════════════════════╣");
+                Console.WriteLine("║ 1. Adicionar Passageiro                                                    ║");
+                Console.WriteLine("║ 2. Listar Passageiros                                                      ║");
+                Console.WriteLine("║ 3. Atualizar Passageiro                                                    ║");
+                Console.WriteLine("║ 4. Excluir Passageiro                                                      ║");
+                Console.WriteLine("║ 0. Voltar                                                                  ║");
+                Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+
+                Console.Write("Escolha uma opção: ");
+                if (int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    switch (opcao)
+                    {
+                        case 1:
+                            AdicionarPassageiro();
+                            break;
+                        case 2:
+                            ListarPassageiros();
+                            break;
+                        case 3:
+                            AtualizarPassageiro();
+                            break;
+                        case 4:
+                            ExcluirPassageiro();
+                            break;
+                        case 0:
+                            Console.WriteLine("\nVoltando ao menu principal...");
+                            break;
+                        default:
+                            Console.WriteLine("\nOpção inválida, tente novamente.");
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nOpção inválida, tente novamente.");
+                }
+
+                Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey();
+            } while (opcao != 0);
+        }
+
+
+        static void AdicionarPassageiro()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                         ADICIONAR NOVO PASSAGEIRO                              ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            string nome;
+            string cpf;
+
+            do
+            {
+                Console.Write("Digite o nome do passageiro: ");
+                nome = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(nome) || nome.Length > 50);
+
+            do
+            {
+                Console.Write("Digite o CPF do passageiro (formato XXX.XXX.XXX-XX): ");
+                cpf = Console.ReadLine();
+            } while (!IsValidCPF(cpf));
+
+            Passageiro novoPassageiro = new Passageiro(proximoIdPassageiro++, nome, cpf);
+            passageiros.Add(novoPassageiro);
+            Console.WriteLine("\nPassageiro adicionado com sucesso!");
+            SalvarPassageiros();
+        }
+
+        static bool IsValidCPF(string cpf)
+        {
+            // Simples validação do formato do CPF. Deve ser ajustada conforme a necessidade
+            return System.Text.RegularExpressions.Regex.IsMatch(cpf, @"^\d{3}\.\d{3}\.\d{3}-\d{2}$");
+        }
+
+
+        static void ListarPassageiros()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                           LISTA DE PASSAGEIROS                              ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            if (passageiros.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNenhum passageiro cadastrado.");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+
+                // Cabeçalhos da tabela
+                Console.WriteLine("╔═════╦════════════════════════════════════╦══════════════════╗");
+                Console.WriteLine("║ ID  ║ Nome                               ║ CPF              ║");
+                Console.WriteLine("╠═════╬════════════════════════════════════╬══════════════════╣");
+
+                foreach (var passageiro in passageiros)
+                {
+                    string nome = passageiro.Nome.Length > 30 ? passageiro.Nome.Substring(0, 30) : passageiro.Nome.PadRight(35);
+                    Console.WriteLine($"║ {passageiro.Id,-3} ║ {nome} ║ {passageiro.CPF.PadRight(14)} ║");
+                }
+
+                // Linha de rodapé
+                Console.WriteLine("╚═════╩════════════════════════════════════╩══════════════════╝");
+                Console.ResetColor();
+            }
+
+            Console.WriteLine("\nPressione Enter para voltar ao menu...");
+            Console.ReadKey();
+        }
+
+        static void AtualizarPassageiro()
+        {
+            ListarPassageiros();
+
+            Console.Write("\nDigite o ID do passageiro a ser atualizado: ");
+            if (int.TryParse(Console.ReadLine(), out int idPassageiro))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == idPassageiro);
+                if (passageiro != null)
+                {
+                    string novoNome;
+                    string novoCPF;
+
+                    do
+                    {
+                        Console.Write("Digite o novo nome do passageiro: ");
+                        novoNome = Console.ReadLine();
+                    } while (string.IsNullOrWhiteSpace(novoNome) || novoNome.Length > 50);
+
+                    do
+                    {
+                        Console.Write("Digite o novo CPF do passageiro (formato XXX.XXX.XXX-XX): ");
+                        novoCPF = Console.ReadLine();
+                    } while (!IsValidCPF(novoCPF));
+
+                    passageiro.Nome = novoNome;
+                    passageiro.CPF = novoCPF;
+
+                    Console.WriteLine("\nPassageiro atualizado com sucesso.");
+                    SalvarPassageiros();
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+
+        static void ExcluirPassageiro()
+        {
+            ListarPassageiros();
+
+            Console.Write("\nDigite o ID do passageiro a ser excluído: ");
+            if (int.TryParse(Console.ReadLine(), out int idPassageiro))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == idPassageiro);
+                if (passageiro != null)
+                {
+                    passageiros.Remove(passageiro);
+                    Console.WriteLine("\nPassageiro removido com sucesso.");
+                    SalvarPassageiros();
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+
+        static void AdicionarVoo()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                            ADICIONAR NOVO VOO                                 ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            string numero;
+            string origem;
+            string destino;
+
+            do
+            {
+                Console.Write("Digite o número do voo: ");
+                numero = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(numero) || numero.Length > 10);
+
+            do
+            {
+                Console.Write("Digite a origem do voo: ");
+                origem = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(origem) || origem.Length > 20);
+
+            do
+            {
+                Console.Write("Digite o destino do voo: ");
+                destino = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(destino) || destino.Length > 20);
+
+            Voo novoVoo = new Voo(proximoIdVoo++, numero, origem, destino);
+            aeroporto.AdicionarVoo(novoVoo);
+            Console.WriteLine("\nVoo adicionado com sucesso!");
+            SalvarVoos();
+        }
+
+
+        static void ListarVoos()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                              LISTA DE VOOS                                    ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            var voos = aeroporto.ObterVoos();
+            if (voos.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nNenhum voo cadastrado.");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+
+                // Cabeçalhos da tabela
+                Console.WriteLine("╔═════╦════════════════╦════════════════╦════════════════╗");
+                Console.WriteLine("║ ID  ║ Número         ║ Origem         ║ Destino        ║");
+                Console.WriteLine("╠═════╬════════════════╬════════════════╬════════════════╣");
+
+                foreach (var voo in voos)
+                {
+                    string numero = voo.Numero.Length > 15 ? voo.Numero.Substring(0, 15) : voo.Numero.PadRight(15);
+                    string origem = voo.Origem.Length > 15 ? voo.Origem.Substring(0, 15) : voo.Origem.PadRight(15);
+                    string destino = voo.Destino.Length > 15 ? voo.Destino.Substring(0, 15) : voo.Destino.PadRight(15);
+
+                    Console.WriteLine($"║ {voo.Id,-3} ║ {numero} ║ {origem} ║ {destino} ║");
+                }
+
+                // Linha de rodapé
+                Console.WriteLine("╚═════╩════════════════╩════════════════╩════════════════╝");
+                Console.ResetColor();
+            }
+
+            Console.WriteLine("\nPressione Enter para voltar ao menu...");
+            Console.ReadKey();
+        }
+
+        static void AtualizarVoo()
+        {
+            ListarVoos();
+
+            Console.Write("\nDigite o ID do voo a ser atualizado: ");
+            if (int.TryParse(Console.ReadLine(), out int idVoo))
+            {
+                var voo = aeroporto.BuscarVooPorId(idVoo);
+                if (voo != null)
+                {
+                    string novoNumero;
+                    string novaOrigem;
+                    string novoDestino;
+
+                    do
+                    {
+                        Console.Write("Digite o novo número do voo: ");
+                        novoNumero = Console.ReadLine();
+                    } while (string.IsNullOrWhiteSpace(novoNumero) || novoNumero.Length > 10);
+
+                    do
+                    {
+                        Console.Write("Digite a nova origem do voo: ");
+                        novaOrigem = Console.ReadLine();
+                    } while (string.IsNullOrWhiteSpace(novaOrigem) || novaOrigem.Length > 20);
+
+                    do
+                    {
+                        Console.Write("Digite o novo destino do voo: ");
+                        novoDestino = Console.ReadLine();
+                    } while (string.IsNullOrWhiteSpace(novoDestino) || novoDestino.Length > 20);
+
+                    voo.Numero = novoNumero;
+                    voo.Origem = novaOrigem;
+                    voo.Destino = novoDestino;
+
+                    Console.WriteLine("\nVoo atualizado com sucesso.");
+                    SalvarVoos();
+                }
+                else
+                {
+                    Console.WriteLine("\nVoo com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+        static void ExcluirVoo()
+        {
+            ListarVoos();
+
+            Console.Write("\nDigite o ID do voo a ser excluído: ");
+            if (int.TryParse(Console.ReadLine(), out int idVoo))
+            {
+                var voo = aeroporto.BuscarVooPorId(idVoo);
+                if (voo != null)
+                {
+                    aeroporto.RemoverVoo(idVoo);
+                    passageirosPorVoo = passageirosPorVoo
+                        .Where(p => p.Value.Contains(idVoo))
+                        .ToDictionary(p => p.Key, p => p.Value.Where(v => v != idVoo).ToList());
+
+                    Console.WriteLine("\nVoo removido com sucesso.");
+                    SalvarVoos();
+                    SalvarPassageirosPorVoo();
+                }
+                else
+                {
+                    Console.WriteLine("\nVoo com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID inválido.");
+            }
+        }
+
+        static void AdicionarPassageiroAVoo()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                      ADICIONAR PASSAGEIRO A VOO                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            ListarPassageiros();
+            Console.Write("\nDigite o ID do passageiro: ");
+            if (int.TryParse(Console.ReadLine(), out int passageiroId))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == passageiroId);
+                if (passageiro != null)
+                {
+                    ListarVoos();
+                    Console.Write("\nDigite o ID do voo: ");
+                    if (int.TryParse(Console.ReadLine(), out int vooId))
+                    {
+                        Voo voo = aeroporto.BuscarVooPorId(vooId);
+                        if (voo != null)
+                        {
+                            passageiro.AdicionarVoo(voo);
+                            if (passageirosPorVoo.ContainsKey(passageiro))
+                            {
+                                passageirosPorVoo[passageiro].Add(vooId);
+                            }
+                            else
+                            {
+                                passageirosPorVoo[passageiro] = new List<int> { vooId };
+                            }
+                            Console.WriteLine("\nPassageiro adicionado ao voo com sucesso.");
+                            SalvarPassageiros();
+                            SalvarVoos();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nVoo com o ID informado não encontrado.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nID do voo inválido.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID do passageiro inválido.");
+            }
+        }
+
+        static void ListarPassageirosDeVoo()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                     LISTA DE PASSAGEIROS POR VOO                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine($"║ Data e Hora: {DateTime.Now:dd/MM/yyyy HH:mm}                               ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════╝");
+            Console.ResetColor();
+
+            Console.Write("Digite o ID do voo: ");
+            if (int.TryParse(Console.ReadLine(), out int vooId))
+            {
+                Voo voo = aeroporto.BuscarVooPorId(vooId);
+                if (voo != null)
+                {
+                    var passageirosVoo = passageiros.Where(p => p.ObterVoos().Any(v => v.Id == vooId)).ToList();
+                    Console.WriteLine($"Passageiros do voo {vooId}:");
+                    if (passageirosVoo.Count > 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+
+                        // Cabeçalhos da tabela
+                        Console.WriteLine("╔═════╦════════════════════════════════════════╦══════════════════╗");
+                        Console.WriteLine("║ ID  ║ Nome                               ║ CPF              ║");
+                        Console.WriteLine("╠═════╬════════════════════════════════════╬══════════════════╣");
+
+                        foreach (var passageiro in passageirosVoo)
+                        {
+                            string nome = passageiro.Nome.Length > 30 ? passageiro.Nome.Substring(0, 30) : passageiro.Nome.PadRight(35);
+                            Console.WriteLine($"║ {passageiro.Id,-3} ║ {nome} ║ {passageiro.CPF.PadRight(14)} ║");
+                        }
+
+                        // Linha de rodapé
+                        Console.WriteLine("╚═════╩════════════════════════════════════╩══════════════════╝");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine($"Nenhum passageiro encontrado para o voo {vooId}.");
+                        Console.ResetColor();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Voo não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID do voo inválido.");
+            }
+
+            Console.WriteLine("\nPressione Enter para voltar ao menu...");
+            Console.ReadKey();
+        }
+
+        static void RemoverPassageiroDoVoo()
+        {
+            ListarPassageiros();
+            Console.Write("\nDigite o ID do passageiro: ");
+            if (int.TryParse(Console.ReadLine(), out int passageiroId))
+            {
+                var passageiro = passageiros.FirstOrDefault(p => p.Id == passageiroId);
+                if (passageiro != null)
+                {
+                    ListarVoos();
+                    Console.Write("\nDigite o ID do voo: ");
+                    if (int.TryParse(Console.ReadLine(), out int vooId))
+                    {
+                        Voo voo = aeroporto.BuscarVooPorId(vooId);
+                        if (voo != null)
+                        {
+                            passageiro.RemoverVoo(voo);
+                            if (passageirosPorVoo.ContainsKey(passageiro))
+                            {
+                                passageirosPorVoo[passageiro].Remove(vooId);
+                                if (!passageirosPorVoo[passageiro].Any())
+                                {
+                                    passageirosPorVoo.Remove(passageiro);
+                                }
+                            }
+                            Console.WriteLine("\nPassageiro removido do voo com sucesso.");
+                            SalvarPassageiros();
+                            SalvarVoos();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nVoo com o ID informado não encontrado.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nID do voo inválido.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nPassageiro com o ID informado não encontrado.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nID do passageiro inválido.");
+            }
+        }
+
+        static void CarregarDados()
+        {
+            CarregarPassageiros();
+            CarregarVoos();
+            CarregarPassageirosPorVoo();
+        }
+
+        static void CarregarPassageiros()
+        {
+            if (File.Exists(arquivoPassageiros))
+            {
+                string json = File.ReadAllText(arquivoPassageiros);
+                passageiros = JsonSerializer.Deserialize<List<Passageiro>>(json) ?? new List<Passageiro>();
+
+                if (passageiros.Count > 0)
+                {
+                    proximoIdPassageiro = passageiros.Max(p => p.Id) + 1;
+                }
+            }
+        }
+
+        static void CarregarVoos()
+        {
+            if (File.Exists(arquivoVoos))
+            {
+                string json = File.ReadAllText(arquivoVoos);
+                var voos = JsonSerializer.Deserialize<List<Voo>>(json) ?? new List<Voo>();
+                foreach (var voo in voos)
+                {
+                    aeroporto.AdicionarVoo(voo);
+                }
+
+                if (voos.Count > 0)
+                {
+                    proximoIdVoo = voos.Max(v => v.Id) + 1;
+                }
+            }
+        }
+
+        static void CarregarPassageirosPorVoo()
+        {
+            if (File.Exists(arquivoPassageirosPorVoo))
+            {
+                string json = File.ReadAllText(arquivoPassageirosPorVoo);
+                if (!string.IsNullOrWhiteSpace(json))
+                {
+                    try
+                    {
+                        passageirosPorVoo = JsonSerializer.Deserialize<Dictionary<int, List<int>>>(json) ?? new Dictionary<int, List<int>>();
+
+                        foreach (var entry in passageirosPorVoo)
+                        {
+                            Passageiro passageiro = passageiros.FirstOrDefault(p => p.Id == entry.Key);
+                            foreach (var vooId in entry.Value)
+                            {
+                                Voo voo = aeroporto.BuscarVooPorId(vooId);
+                                if (passageiro != null && voo != null)
+                                {
+                                    passageiro.AdicionarVoo(voo, aeroporto);
+                                }
+                            }
+                        }
+                    }
+                    catch (JsonException ex)
+                    {
+                        Console.WriteLine($"Erro ao desserializar o JSON dos passageiros por voo: {ex.Message}");
+                    }
+                }
+            }
+        }
+
+        static void SalvarPassageiros()
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(passageiros, options);
+            File.WriteAllText(arquivoPassageiros, json);
+        }
+
+        static void SalvarVoos()
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(aeroporto.ObterVoos(), options);
+            File.WriteAllText(arquivoVoos, json);
+        }
+
+        static void SalvarPassageirosPorVoo()
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(passageirosPorVoo, options);
+            File.WriteAllText(arquivoPassageirosPorVoo, json);
+        }
+
+        static void SalvarDados()
+        {
+            SalvarPassageiros();
+            SalvarVoos();
+            SalvarPassageirosPorVoo();
+        }
+    }
+}
+
+
+
+/*namespace GerenciamentoAeroporto
+{
+    class Program
+    {
+        static List<Passageiro> passageiros = new List<Passageiro>();
+        static Aeroporto aeroporto = new Aeroporto();
+        static string DateAndTime = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        static Dictionary<int, List<int>> passageirosPorVoo = new Dictionary<int, List<int>>();
+        static string arquivoPassageiros = @"C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\JSON\passageiros.json";
+        static string arquivoVoos = @"C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\JSON\voos.json";
+        static string arquivoPassageirosPorVoo = @"C:\Users\Aluno Noite\Documents\GitHub\Curso-CSharp-VS2022\JSON\passageirosPorVoo.json";
+        static int proximoIdPassageiro = 1;
+        static int proximoIdVoo = 1;
+
+        static void Main(string[] args)
+        {
+            CarregarDados();
+
+            int opcao = 0;
+            do
+            {
+                Console.Clear();
                 Console.WriteLine("==============================================");
                 Console.WriteLine("======= GERENCIAMENTO DE AEROPORTO ===========");
                 Console.WriteLine("==============================================");
-                Console.WriteLine("Autor: Arthur =============" + DateAndTime +  "\n");
+                Console.WriteLine("Autor: Arthur =============" + DateAndTime + "\n");
                 Console.WriteLine("1. Gerenciar Voos");
                 Console.WriteLine("2. Gerenciar Passageiros");
                 Console.WriteLine("0. Sair");
@@ -567,20 +1332,7 @@ namespace GerenciamentoAeroporto
             SalvarPassageirosPorVoo();
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 
 /*namespace BibliotecaVeiculos
